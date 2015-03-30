@@ -44,5 +44,7 @@ group :development, :test do
 
   gem 'MtgDbClient'
 
+  gem 'httparty'
+
 end
 
