@@ -1,9 +1,8 @@
 class CardsController < ApplicationController
 
-  def search
-    client = Client.MtgDbClient::Client.new
-    @search_results = client.search(params[:cardname])
-    render 'search'
+  def results
+    client = MtgDbClient::Client.new
+    @search_results = client.search(params[:card_name])
   end
 
 end

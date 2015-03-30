@@ -1,0 +1,5 @@
+<%= form_tag("/results", method: "post") do %>
+  <%= label_tag(:card_name, "Search for:") %>
+  <%= text_field_tag(:card_name) %>
+  <%= submit_tag("Search") %>
+<% end %>
