@@ -1,6 +1,5 @@
 <% @search_results.each do |card| %>
   <%= card.name %>
   <%= card.card_set_name %>
-  <% url = "http://magictcgprices.appspot.com/api/cfb/price.json?cardname=#{card.name.gsub(/\s/,'%20')}&setname=#{card.card_set_id}" %>
-  <%= HTTParty.get(url).pop %>
+  <%= HTTParty.get(" http://magictcgprices.appspot.com/api/tcgplayer/price.json?cardname=#{card.name.gsub(/\s/,'%20')}&setname=#{card.card_set_name.gsub(/\s/,'%20')}").pop %>
 <% end %>
