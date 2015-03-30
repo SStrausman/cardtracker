@@ -1,7 +1,7 @@
 class WelcomeController < ApplicationController
 
   def index
-    @chicken = "some stuff"
+    @users = User.all
   end
 
 end
