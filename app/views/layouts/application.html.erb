@@ -7,13 +7,41 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<header id="header">
+<%= link_to "Home", "/" %> |
   <% if current_user %>
     Signed in as <%= current_user.name %> | <%= link_to "Logout", '/logout' %>
   <% else %>
     <%= link_to 'Login', '/login' %> | <%= link_to 'Signup', '/signup' %>
   <% end %>
+</header>
+<div id="nav">
+<ul>
+<li><a href="#">Option 1</a></li>
+<li><a href="#">Option 2</a></li>
+...
+</ul>
+</div>
+<div id="main">
+<h2>Column 1</h2>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+</div>
+<div id="sidebar">
+<h2>Column 2</h2>
+<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit...</p>
+<ul>
+<li><a href="#">Link 1</a></li>
+<li><a href="#">Link 2</a></li>
+...
+</ul>
+</div>
+<div id="footer">
+<p>Footer</p>
+</div>
+</div>
 
 <%= yield %>
+
 
 </body>
 </html>
